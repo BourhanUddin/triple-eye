@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripleEye Logistics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body class="font-sans text-gray-800">
+
+<!-- NAVBAR -->
+<section
+  class="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
+  style="background-image: url('assets/images/hero-image.png');"
+>
+  <!-- Light Overlay for White Image -->
+  <div class="absolute inset-0 bg-white/40"></div>
+<header class="absolute top-0 left-0 w-full z-50">
+  <nav class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logoIII.png" alt="TripleEye Logo" class="h-20">
+        <span class="text-[#0B1C2D] text-xl font-semibold tracking-wide">
+          TripleEye
+        </span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center space-x-8 text-lg font-medium">
+        <a href="#services" class="nav-light-link">Services</a>
+        <a href="#blog" class="nav-light-link">Blog</a>
+        <a href="#about" class="nav-light-link">About Us</a>
+
+        <a href="https://wa.me/8801742999121"
+           target="_blank"
+           class="ml-4 bg-[#1FB6AA] text-white px-5 py-2 rounded-lg
+                  hover:bg-[#169E94] transition shadow-sm">
+          Contact Us
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn"
+              class="lg:hidden text-[#0B1C2D] focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+       class="hidden lg:hidden bg-white shadow-lg border-t border-gray-200">
+    <div class="px-6 py-6 space-y-4 text-lg font-medium">
+      <a href="#services" class="block nav-light-link">Services</a>
+      <a href="#blog" class="block nav-light-link">Blog</a>
+      <a href="#about" class="block nav-light-link">About Us</a>
+
+      <a href="https://wa.me/8801742999121"
+         target="_blank"
+         class="block text-center bg-[#1FB6AA] text-white py-3 rounded-lg
+                hover:bg-[#169E94] transition">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</header>
+<!-- end navbar -->
+<div class="relative z-10 flex items-center justify-center min-h-screen px-6">
+  <div class="max-w-3xl text-center
+              animate-hero">
+
+    <!-- Badge -->
+    <div class="inline-flex items-center px-4 py-1 mb-6 rounded-full
+                bg-[#1FB6AA]/10 text-[#0B1C2D] text-sm font-medium
+                animate-hero-delay-1">
+      Nationwide logistics solutions you can rely on
+      <span class="ml-2 text-[#1FB6AA]">Learn more →</span>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-6xl font-bold
+               text-[#0B1C2D] leading-tight mb-6
+               animate-hero-delay-2">
+      Logistics that move<br class="hidden md:block">
+      businesses forward
+    </h1>
+
+    <!-- Paragraph -->
+    <p class="text-lg text-[#475569] mb-10
+              animate-hero-delay-3">
+      TripleEye delivers dependable transport services across Bangladesh
+      with precision, reliability, and scale.
+    </p>
+
+    <!-- CTA -->
+    <div class="flex items-center justify-center gap-6
+                animate-hero-delay-4">
+      <a href="https://wa.me/8801816554108"
+         class="bg-[#0B1C2D] text-white px-6 py-3 rounded-lg
+                hover:bg-[#102A43] transition shadow-md">
+        Get a quote
+      </a>
+
+      <a href="#services"
+         class="text-[#0B1C2D] font-medium hover:underline">
+        Learn more →
+      </a>
+    </div>
+
+  </div>
+</div>
+
+</section>   
+   <!-- start services section -->
+   <!--Transport Services Section -->
+ <section id="transport" class="py-20 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col lg:flex-row items-stretch bg-[#F8FAFC] rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+      
+     <div class="lg:w-1/2 relative min-h-[400px] lg:min-h-[550px] overflow-hidden">
+        <div class="transport-slide active absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+          <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=1200" 
+               alt="Road Transport" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B1C2D]/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <h4 class="text-xl font-bold">Land Network</h4>
+            <p class="text-sm opacity-80">Seamless Road Connectivity</p>
+          </div>
+        </div>
+
+        <div class="transport-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+          <img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=1200" 
+               alt="Sea Freight" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B1C2D]/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <h4 class="text-xl font-bold">Maritime Solutions</h4>
+            <p class="text-sm opacity-80">Global Port-to-Port Reach</p>
+          </div>
+        </div>
+
+        <div class="transport-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200" 
+               alt="Air Cargo" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B1C2D]/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <h4 class="text-xl font-bold">Sky Cargo</h4>
+            <p class="text-sm opacity-80">High-Priority Air Logistics</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center reveal-container">
+        
+        <div class="reveal-text opacity-0 translate-y-4 transition-all duration-700 delay-100 flex items-center space-x-2 mb-4">
+          <span class="w-8 h-[2px] bg-[#1FB6AA]"></span>
+          <span class="text-[#1FB6AA] font-bold tracking-widest text-xs uppercase">Core Capabilities</span>
+        </div>
+
+        <h2 class="reveal-text opacity-0 translate-y-6 transition-all duration-700 delay-300 text-3xl md:text-5xl font-bold text-[#0B1C2D] mb-6 leading-tight">
+          Precision Logistics <br> 
+          <span class="text-[#1FB6AA] inline-block hover:scale-105 transition-transform duration-300">Through Every Route</span>
+        </h2>
+
+        <p class="reveal-text opacity-0 translate-y-6 transition-all duration-700 delay-500 text-gray-600 text-lg mb-8 leading-relaxed">
+          As the <strong>TripleEye</strong> mother company, we synchronize global transit routes through an intelligent grid, ensuring your assets move with total oversight.
+        </p>
+
+        <div class="reveal-text opacity-0 translate-y-6 transition-all duration-700 delay-700 grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div class="flex items-start space-x-3 group">
+            <div class="mt-1 bg-[#1FB6AA]/10 p-1 rounded group-hover:bg-[#1FB6AA] group-hover:text-white transition-colors">
+              <svg class="w-4 h-4 text-[#1FB6AA] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <div>
+              <h5 class="font-bold text-[#0B1C2D]">Intermodal Power</h5>
+              <p class="text-sm text-gray-500">Unified global networks.</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3 group">
+            <div class="mt-1 bg-[#1FB6AA]/10 p-1 rounded group-hover:bg-[#1FB6AA] transition-colors">
+              <svg class="w-4 h-4 text-[#1FB6AA] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <div>
+              <h5 class="font-bold text-[#0B1C2D]">Global Vision</h5>
+              <p class="text-sm text-gray-500">24/7 oversight.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-text opacity-0 translate-y-6 transition-all duration-700 delay-1000">
+            <a href="#services" class="group flex items-center justify-between bg-[#0B1C2D] text-white px-8 py-4 rounded-xl hover:bg-[#1FB6AA] transition-all duration-500 shadow-lg w-full sm:w-max">
+              <span class="font-semibold mr-4">View Specific Services</span>
+              <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Conference Section -->
+<section id="cnf-service" class="py-24 bg-gray-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      
+      <div class="lg:w-1/2 cnf-reveal-container">
+        <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-1000 ease-out">
+          <div class="inline-flex items-center space-x-2 mb-6">
+            <span class="bg-[#1FB6AA] w-2 h-2 rounded-full animate-pulse"></span>
+            <span class="text-[#1FB6AA] text-sm font-bold uppercase tracking-widest">Dhaka & Chittagong Customs</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-[#0B1C2D] leading-tight mb-6">
+            Comprehensive <span class="text-[#1FB6AA]">C&F Solutions</span>
+          </h2>
+          <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+            Our expert agents navigate complex customs regulations so you don't have to. From high-priority air cargo in Dhaka to heavy sea freight in Chittagong, we handle it all.
+          </p>
+        </div>
+
+        <div class="space-y-4 mb-10">
+          <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-700 delay-200 flex items-center p-4 bg-white rounded-xl shadow-sm border-r-4 border-transparent hover:border-[#1FB6AA] group transition-all cursor-default">
+            <div class="bg-gray-100 group-hover:bg-[#1FB6AA] p-3 rounded-lg mr-4 transition-colors">
+              <svg class="w-6 h-6 text-[#0B1C2D] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <div>
+                <h4 class="font-bold text-[#0B1C2D]">Documentation & Duty</h4>
+                <p class="text-sm text-gray-500">Preparation, Calculation & Payment</p>
+            </div>
+          </div>
+
+          <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-700 delay-400 flex items-center p-4 bg-white rounded-xl shadow-sm border-r-4 border-transparent hover:border-[#1FB6AA] group transition-all cursor-default">
+            <div class="bg-gray-100 group-hover:bg-[#1FB6AA] p-3 rounded-lg mr-4 transition-colors">
+              <svg class="w-6 h-6 text-[#0B1C2D] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <div>
+                <h4 class="font-bold text-[#0B1C2D]">Port & Airport Clearance</h4>
+                <p class="text-sm text-gray-500">Fast-track Customs Declarations</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-1000 delay-600">
+            <a href="https://wa.me/8801742999121" target="_blank" class="inline-block bg-[#1FB6AA] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:shadow-[#1FB6AA]/30 transform hover:-translate-y-1 transition-all">
+                Talk to a Customs Expert
+            </a>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 relative h-[400px] lg:h-[500px] w-full">
+        <div class="relative h-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-200">
+          
+          <div class="cnf-image-slide active absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200" alt="Documentation" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 p-6 bg-black/40 backdrop-blur-sm text-white w-full z-20">
+                <p class="text-sm font-bold uppercase">Step 01: Compliance Documentation</p>
+            </div>
+          </div>
+
+          <div class="cnf-image-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=1200" alt="Port Operations" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 p-6 bg-black/40 backdrop-blur-sm text-white w-full z-20">
+                <p class="text-sm font-bold uppercase">Step 02: Customs & Port Clearance</p>
+            </div>
+          </div>
+
+          <div class="cnf-image-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200" alt="Delivery" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 p-6 bg-black/40 backdrop-blur-sm text-white w-full z-20">
+                <p class="text-sm font-bold uppercase">Step 03: Last-Mile Coordination</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="absolute -top-6 -right-6 w-32 h-32 bg-[#0B1C2D] rounded-full -z-10 opacity-10"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- end services section -->
+
+  <section id="offices-map" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-extrabold text-[#0B1C2D] mb-4">Strategic <span class="text-[#1FB6AA]">Operational Hubs</span></h2>
+      <p class="text-gray-500 max-w-2xl mx-auto">Located in the commercial hearts of Bangladesh to ensure rapid customs processing and logistics management.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      
+      <div class="flex flex-col h-full bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 hover:border-[#1FB6AA] transition-all duration-500 shadow-sm hover:shadow-xl">
+        <div class="p-8">
+          <div class="flex items-center mb-6">
+            <div class="bg-[#0B1C2D] p-3 rounded-xl text-white mr-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-[#0B1C2D]">Chattogram Office</h3>
+              <p class="text-[#1FB6AA] text-xs font-bold uppercase tracking-widest">Port & Customs Operations</p>
+            </div>
+          </div>
+          <address class="not-italic text-gray-600 mb-6">
+            <p class="font-bold text-[#0B1C2D] mb-1">Daar-E-Shahidi (3rd Floor)</p>
+            <p>69, Agrabad Commercial Area (C/A)</p>
+            <p>Chattogram-4100, Bangladesh</p>
+          </address>
+        </div>
+        <div class="w-full h-[300px] mt-auto">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.0384503798534!2d91.81056527602334!3d22.33331904169727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8b6ae35f32f%3A0x558e3f53ca034293!2sDAAR-E-SHAHIDI!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="flex flex-col h-full bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 hover:border-[#1FB6AA] transition-all duration-500 shadow-sm hover:shadow-xl">
+        <div class="p-8">
+          <div class="flex items-center mb-6">
+            <div class="bg-[#0B1C2D] p-3 rounded-xl text-white mr-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-[#0B1C2D]">Dhaka Office</h3>
+              <p class="text-[#1FB6AA] text-xs font-bold uppercase tracking-widest">HQ & Inland Logistics</p>
+            </div>
+          </div>
+          <address class="not-italic text-gray-600 mb-6">
+            <p class="font-bold text-[#0B1C2D] mb-1">235 Baitul Nur Mosque (4th Floor)</p>
+            <p>Tejgaon Truck Stand, Tejgaon</p>
+            <p>Dhaka-1208, Bangladesh</p>
+          </address>
+        </div>
+        <div class="w-full h-[300px] mt-auto">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.5714397731995!2d90.39578667606627!3d23.76264628830707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79be5b51ec7%3A0x6551607e483feda6!2sBaitun%20Nur%20Jame%20Masjid%20-%20DLR%20Mosque!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
