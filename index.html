@@ -10,64 +10,54 @@
 </head>
 <body class="font-sans text-gray-800">
 
-<!-- NAVBAR -->
+<!-- NAVBAR --> 
 <section
   class="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
   style="background-image: url('assets/images/hero-image.png');"
 >
   <!-- Light Overlay for White Image -->
-  <div class="absolute inset-0 bg-white/40"></div>
-<header class="absolute top-0 left-0 w-full z-50">
+  <div class="absolute inset-0 bg-white/30"></div>
+<header id="main-header" class="fixed top-0 left-0 w-full z-[100] transition-all duration-300 border-b border-transparent">
+  <div class="absolute inset-0 bg-white/30 backdrop-blur-md z-[-1]"></div>
+
   <nav class="max-w-7xl mx-auto px-6">
     <div class="flex items-center justify-between h-20">
 
-      <!-- Logo -->
       <div class="flex items-center space-x-3">
-        <img src="assets/images/logoIII.png" alt="TripleEye Logo" class="h-20">
-        <span class="text-[#0B1C2D] text-xl font-semibold tracking-wide">
+        <img src="assets/images/logoIII.png" alt="TripleEye Logo" class="h-16 lg:h-20 transition-all duration-300" id="nav-logo">
+        <span class="text-[#0B1C2D] text-xl font-bold tracking-wide transition-colors duration-300" id="nav-brand">
           TripleEye
         </span>
       </div>
 
-      <!-- Desktop Menu -->
-      <div class="hidden lg:flex items-center space-x-8 text-lg font-medium">
-        <a href="#services" class="nav-light-link">Services</a>
-        <a href="#blog" class="nav-light-link">Blog</a>
-        <a href="#about" class="nav-light-link">About Us</a>
+      <div class="hidden lg:flex items-center space-x-8 text-lg font-bold">
+        <a href="#services" class="text-[#0B1C2D] hover:text-[#1FB6AA] transition-colors">Services</a>
+        <a href="#blog" class="text-[#0B1C2D] hover:text-[#1FB6AA] transition-colors">Blog</a>
+        <a href="#about" class="text-[#0B1C2D] hover:text-[#1FB6AA] transition-colors">About Us</a>
 
         <a href="https://wa.me/8801742999121"
            target="_blank"
-           class="ml-4 bg-[#1FB6AA] text-white px-5 py-2 rounded-lg
-                  hover:bg-[#169E94] transition shadow-sm">
+           class="ml-4 bg-[#1FB6AA] text-white px-6 py-2.5 rounded-full
+                  hover:bg-[#169E94] transition shadow-lg shadow-[#1FB6AA]/20">
           Contact Us
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn"
-              class="lg:hidden text-[#0B1C2D] focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16" />
+      <button id="menu-btn" class="lg:hidden text-[#0B1C2D] focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu"
-       class="hidden lg:hidden bg-white shadow-lg border-t border-gray-200">
-    <div class="px-6 py-6 space-y-4 text-lg font-medium">
-      <a href="#services" class="block nav-light-link">Services</a>
-      <a href="#blog" class="block nav-light-link">Blog</a>
-      <a href="#about" class="block nav-light-link">About Us</a>
-
-      <a href="https://wa.me/8801742999121"
-         target="_blank"
-         class="block text-center bg-[#1FB6AA] text-white py-3 rounded-lg
-                hover:bg-[#169E94] transition">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white/90 backdrop-blur-xl border-t border-gray-100">
+    <div class="px-6 py-8 space-y-4 text-lg font-medium">
+      <a href="#services" class="block text-[#0B1C2D] hover:text-[#1FB6AA]">Services</a>
+      <a href="#blog" class="block text-[#0B1C2D] hover:text-[#1FB6AA]">Blog</a>
+      <a href="#about" class="block text-[#0B1C2D] hover:text-[#1FB6AA]">About Us</a>
+      <a href="https://wa.me/8801742999121" target="_blank" class="block text-center bg-[#1FB6AA] text-white py-4 rounded-xl font-bold">
         Contact Us
       </a>
     </div>
@@ -87,18 +77,18 @@
     </div>
 
     <!-- Heading -->
-    <h1 class="text-4xl md:text-6xl font-bold
-               text-[#0B1C2D] leading-tight mb-6
+    <h1 class="text-4xl md:text-5xl font-bold 
+               text-white leading-tight mb-6
                animate-hero-delay-2">
-      Logistics that move<br class="hidden md:block">
-      businesses forward
+      Integrated Logistics Transport
+<br class="hidden md:block">
+      Freight Solutions
     </h1>
 
     <!-- Paragraph -->
-    <p class="text-lg text-[#475569] mb-10
+    <p class="text-lg text-[#102A43] mb-10
               animate-hero-delay-3">
-      TripleEye delivers dependable transport services across Bangladesh
-      with precision, reliability, and scale.
+    Triple Eye Group is a professional logistics and transportation enterprise providing Clearing & Forwarding (C&F), Freight Forwarding, and Port-Based Transport Services. We operate with a strong focus on efficiency, compliance, and reliability, supporting domestic and international trade through seamless cargo movement.Our integrated service model allows clients to experience end-to-end logistics solutions from port clearance to final delivery.
     </p>
 
     <!-- CTA -->
@@ -122,7 +112,7 @@
 </section>   
    <!-- start services section -->
    <!--Transport Services Section -->
- <section id="transport" class="py-20 bg-white overflow-hidden">
+ <section id="services" class="py-20 bg-white overflow-hidden">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex flex-col lg:flex-row items-stretch bg-[#F8FAFC] rounded-3xl overflow-hidden shadow-xl border border-gray-100">
       
@@ -158,7 +148,7 @@
         </div>
       </div>
 
-      <div class="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center reveal-container">
+      <div class="lg:w-1/2 p-6 md:p-12 lg:p-16 flex flex-col justify-center reveal-container">
         
         <div class="reveal-text opacity-0 translate-y-4 transition-all duration-700 delay-100 flex items-center space-x-2 mb-4">
           <span class="w-8 h-[2px] bg-[#1FB6AA]"></span>
@@ -171,33 +161,47 @@
         </h2>
 
         <p class="reveal-text opacity-0 translate-y-6 transition-all duration-700 delay-500 text-gray-600 text-lg mb-8 leading-relaxed">
-          As the <strong>TripleEye</strong> mother company, we synchronize global transit routes through an intelligent grid, ensuring your assets move with total oversight.
+          As the <strong>TripleEye</strong> transport and logistics solutions are designed to ensure safe, timely, and cost-efficient cargo movement across domestic and international routes.
         </p>
 
-        <div class="reveal-text opacity-0 translate-y-6 transition-all duration-700 delay-700 grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-          <div class="flex items-start space-x-3 group">
+        <div class="reveal-text opacity-0 translate-y-6 transition-all duration-700 delay-700 grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div class="flex items-start space-x-2 group">
             <div class="mt-1 bg-[#1FB6AA]/10 p-1 rounded group-hover:bg-[#1FB6AA] group-hover:text-white transition-colors">
               <svg class="w-4 h-4 text-[#1FB6AA] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
             </div>
             <div>
-              <h5 class="font-bold text-[#0B1C2D]">Intermodal Power</h5>
-              <p class="text-sm text-gray-500">Unified global networks.</p>
+              <h5 class="font-bold text-[#0B1C2D]">International air & sea freight forwarding</h5>
             </div>
           </div>
-          <div class="flex items-start space-x-3 group">
+          <div class="flex items-start space-x-2 group">
             <div class="mt-1 bg-[#1FB6AA]/10 p-1 rounded group-hover:bg-[#1FB6AA] transition-colors">
               <svg class="w-4 h-4 text-[#1FB6AA] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
             </div>
             <div>
-              <h5 class="font-bold text-[#0B1C2D]">Global Vision</h5>
-              <p class="text-sm text-gray-500">24/7 oversight.</p>
+              <h5 class="font-bold text-[#0B1C2D]">Inland Cargo movement & distribution</h5>
+            </div>
+          </div>
+          <div class="flex items-start space-x-1 group">
+            <div class="mt-1 bg-[#1FB6AA]/10 p-1 rounded group-hover:bg-[#1FB6AA] transition-colors">
+              <svg class="w-4 h-4 text-[#1FB6AA] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <div>
+              <h5 class="font-bold text-[#0B1C2D]">Global logistics planning and shipment execution</h5>
+            </div>
+          </div>
+          <div class="flex items-start space-x-1 group">
+            <div class="mt-1 bg-[#1FB6AA]/10 p-1 rounded group-hover:bg-[#1FB6AA] transition-colors">
+              <svg class="w-4 h-4 text-[#1FB6AA] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <div>
+              <h5 class="font-bold text-[#0B1C2D]">Door-to-door transport and logistics solutions</h5>
             </div>
           </div>
         </div>
 
         <div class="reveal-text opacity-0 translate-y-6 transition-all duration-700 delay-1000">
-            <a href="#services" class="group flex items-center justify-between bg-[#0B1C2D] text-white px-8 py-4 rounded-xl hover:bg-[#1FB6AA] transition-all duration-500 shadow-lg w-full sm:w-max">
-              <span class="font-semibold mr-4">View Specific Services</span>
+            <a href="https://wa.me/8801742999121" class="group flex items-center justify-between bg-[#0B1C2D] text-white px-8 py-4 rounded-xl hover:bg-[#1FB6AA] transition-all duration-500 shadow-lg w-full sm:w-max">
+              <span class="font-semibold mr-4">Contact for Specific Service</span>
               <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
         </div>
@@ -221,12 +225,12 @@
             Comprehensive <span class="text-[#1FB6AA]">C&F Solutions</span>
           </h2>
           <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-            Our expert agents navigate complex customs regulations so you don't have to. From high-priority air cargo in Dhaka to heavy sea freight in Chittagong, we handle it all.
+         We deliver end-to-end clearing and forwarding solutions to ensure full regulatory compliance and smooth cargo movement through ports and customs authorities.
           </p>
         </div>
 
-        <div class="space-y-4 mb-10">
-          <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-700 delay-200 flex items-center p-4 bg-white rounded-xl shadow-sm border-r-4 border-transparent hover:border-[#1FB6AA] group transition-all cursor-default">
+        <div class="space-y-2 mb-10">
+          <div class="cnf-slide-in opacity-0 -translate-x-10 transition-all duration-700 delay-200 flex items-center p-3 bg-white rounded-xl shadow-sm border-r-4 border-transparent hover:border-[#1FB6AA] group transition-all cursor-default">
             <div class="bg-gray-100 group-hover:bg-[#1FB6AA] p-3 rounded-lg mr-4 transition-colors">
               <svg class="w-6 h-6 text-[#0B1C2D] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
             </div>
@@ -235,8 +239,7 @@
                 <p class="text-sm text-gray-500">Preparation, Calculation & Payment</p>
             </div>
           </div>
-
-          <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-700 delay-400 flex items-center p-4 bg-white rounded-xl shadow-sm border-r-4 border-transparent hover:border-[#1FB6AA] group transition-all cursor-default">
+            <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-700 delay-400 flex items-center p-3 bg-white rounded-xl shadow-sm border-r-4 border-transparent hover:border-[#1FB6AA] group transition-all cursor-default">
             <div class="bg-gray-100 group-hover:bg-[#1FB6AA] p-3 rounded-lg mr-4 transition-colors">
               <svg class="w-6 h-6 text-[#0B1C2D] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
             </div>
@@ -245,6 +248,17 @@
                 <p class="text-sm text-gray-500">Fast-track Customs Declarations</p>
             </div>
           </div>
+          <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-700 delay-200 flex items-center p-3 bg-white rounded-xl shadow-sm border-r-4 border-transparent hover:border-[#1FB6AA] group transition-all cursor-default">
+            <div class="bg-gray-100 group-hover:bg-[#1FB6AA] p-3 rounded-lg mr-4 transition-colors">
+              <svg class="w-6 h-6 text-[#0B1C2D] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <div>
+                <h4 class="font-bold text-[#0B1C2D]">Import and export customs clearance</h4>
+                <p class="text-sm text-gray-500">Liaison and coordination with customs, port, shipping, and regulatory authorities</p>
+            </div>
+          </div>
+
+        
         </div>
 
         <div class="cnf-slide-in opacity-0 -translate-x-12 transition-all duration-1000 delay-600">
@@ -254,7 +268,7 @@
         </div>
       </div>
 
-      <div class="lg:w-1/2 relative h-[400px] lg:h-[500px] w-full">
+      <div class="lg:w-1/2 relative h-[400px] lg:h-[600px] w-full">
         <div class="relative h-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gray-200">
           
           <div class="cnf-image-slide active absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
@@ -286,6 +300,50 @@
   </div>
 </section>
   <!-- end services section -->
+<section id="mission-vision" class="relative py-24 bg-[#F8FAFC] overflow-hidden">
+  
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-[#1FB6AA]/5 -skew-x-12 translate-x-20"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="flex flex-col lg:flex-row gap-8">
+      
+      <div class="mission-reveal lg:w-1/2 bg-white p-12 lg:p-16 rounded-3xl shadow-sm border border-gray-100 opacity-0 -translate-x-12 transition-all duration-1000">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="w-12 h-12 bg-[#0B1C2D] rounded-2xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-[#0B1C2D] font-bold tracking-[0.2em] uppercase text-sm">The Mission</h3>
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0B1C2D] mb-6 leading-tight">
+          Delivering <span class="text-[#1FB6AA]">Trusted</span> & <br>Compliant Solutions.
+        </h2>
+        
+        <p class="text-gray-600 text-lg leading-relaxed">
+          To deliver efficient and compliant logistics solutions through integrated transport, C&F, and freight services—ensuring smooth cargo flow, timely delivery, and complete operational transparency.
+        </p>
+      </div>
+
+      <div class="vision-reveal lg:w-1/2 bg-white p-12 lg:p-16 rounded-3xl shadow-xl shadow-teal-900/5 border-t-4 border-[#1FB6AA] opacity-0 translate-x-12 transition-all duration-1000 delay-300">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="w-12 h-12 bg-[#1FB6AA] rounded-2xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+          </div>
+          <h3 class="text-[#1FB6AA] font-bold tracking-[0.2em] uppercase text-sm">The Vision</h3>
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0B1C2D] mb-6 leading-tight">
+          Connecting Trade to <br><span class="text-[#1FB6AA]">Global Networks.</span>
+        </h2>
+        
+        <p class="text-gray-600 text-lg leading-relaxed">
+          To become a leading logistics and freight solutions group, recognized for professional excellence, ethical operations, and innovation, connecting businesses to global trade networks with confidence.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <section id="offices-map" class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-6">
@@ -349,6 +407,7 @@
     </div>
   </div>
 </section>
+<!-- end offices map section -->
 
 
   <script src="js/main.js"></script>

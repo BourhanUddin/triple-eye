@@ -61,3 +61,8 @@
   opacity: 1 !important;
   transform: translateX(0) !important;
 }
+/* Triggered by JavaScript */
+    .reveal-now {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+    }

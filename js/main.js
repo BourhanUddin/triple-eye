@@ -6,6 +6,22 @@ menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
+
+// Script to change navbar style on scroll
+  window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+      header.classList.add('shadow-lg', 'bg-white/80');
+      header.classList.remove('border-transparent');
+    } else {
+      header.classList.remove('shadow-lg', 'bg-white/80');
+      header.classList.add('border-transparent');
+    }
+  });
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
 // JavaScript for Image Slider and Scroll Animation for Transport Section
   document.addEventListener('DOMContentLoaded', () => {
     // 1. Image Slider Logic (5 Seconds)
@@ -72,4 +88,26 @@ document.addEventListener('DOMContentLoaded', () => {
   if (container) {
     cnfObserver.observe(container);
   }
+});
+
+// JavaScript for Image Slider and Scroll Animation for Mission & Vision Section
+document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelector('.mission-reveal').classList.add('reveal-now');
+                // Small delay for the vision card to create a staggered effect
+                setTimeout(() => {
+                    entry.target.querySelector('.vision-reveal').classList.add('reveal-now');
+                }, 300);
+                sectionObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    sectionObserver.observe(document.querySelector('#mission-vision'));
 });
