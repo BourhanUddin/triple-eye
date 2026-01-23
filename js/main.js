@@ -1,113 +1,73 @@
-
+// --- NAVBAR & MOBILE MENU ---
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
+const header = document.getElementById('main-header');
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
-
-
-// Script to change navbar style on scroll
-  window.addEventListener('scroll', function() {
-    const header = document.getElementById('main-header');
-    if (window.scrollY > 50) {
-      header.classList.add('shadow-lg', 'bg-white/80');
-      header.classList.remove('border-transparent');
-    } else {
-      header.classList.remove('shadow-lg', 'bg-white/80');
-      header.classList.add('border-transparent');
-    }
-  });
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-// JavaScript for Image Slider and Scroll Animation for Transport Section
-  document.addEventListener('DOMContentLoaded', () => {
-    // 1. Image Slider Logic (5 Seconds)
-    const slides = document.querySelectorAll('.transport-slide');
-    let currentSlide = 0;
-    setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 5000);
-
-    // 2. Scroll Animation Logic
-    const observerOptions = { threshold: 0.2 };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const texts = entry.target.querySelectorAll('.reveal-text');
-          texts.forEach(text => text.classList.add('reveal-active'));
-        }
-      });
-    }, observerOptions);
-
-    observer.observe(document.querySelector('.reveal-container'));
-  });
-
-
-// JavaScript for Image Slider and Scroll Animation for CNF Section
-document.addEventListener('DOMContentLoaded', () => {
-  // --- 1. IMAGE SLIDER LOGIC ---
-  const slides = document.querySelectorAll('.cnf-image-slide');
-  let currentSlide = 0;
-
-  function nextCnfSlide() {
-    // Remove active class from current
-    slides[currentSlide].classList.remove('active');
-    
-    // Move to next slide index
-    currentSlide = (currentSlide + 1) % slides.length;
-    
-    // Add active class to next
-    slides[currentSlide].classList.add('active');
-  }
-
-  // Run the slider every 5 seconds
-  if (slides.length > 0) {
-    setInterval(nextCnfSlide, 5000);
-  }
-
-  // --- 2. SCROLL REVEAL LOGIC ---
-  const cnfObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const elements = entry.target.querySelectorAll('.cnf-slide-in');
-        elements.forEach(el => {
-          el.classList.add('cnf-reveal-active');
-        });
-        // Unobserve once animation is triggered for better performance
-        cnfObserver.unobserve(entry.target);
-      }
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
     });
-  }, { threshold: 0.2 });
+}
 
-  const container = document.querySelector('.cnf-reveal-container');
-  if (container) {
-    cnfObserver.observe(container);
-  }
+window.addEventListener('scroll', function() {
+    if (header) {
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-lg', 'bg-white/80');
+            header.classList.remove('border-transparent');
+        } else {
+            header.classList.remove('shadow-lg', 'bg-white/80');
+            header.classList.add('border-transparent');
+        }
+    }
 });
 
-// JavaScript for Image Slider and Scroll Animation for Mission & Vision Section
+// --- SHARED OBSERVER LOGIC ---
 document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-        threshold: 0.2
+    
+    // 1. Transport & CNF Sliders
+    const setupSlider = (slideClassName) => {
+        const slides = document.querySelectorAll(slideClassName);
+        if (slides.length > 0) {
+            let currentSlide = 0;
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 5000);
+        }
     };
 
-    const sectionObserver = new IntersectionObserver((entries) => {
+    setupSlider('.transport-slide');
+    setupSlider('.cnf-image-slide');
+
+    // 2. Intersection Observer for All Sections
+    const observerOptions = { threshold: 0.2 };
+    
+    const generalObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.querySelector('.mission-reveal').classList.add('reveal-now');
-                // Small delay for the vision card to create a staggered effect
-                setTimeout(() => {
-                    entry.target.querySelector('.vision-reveal').classList.add('reveal-now');
-                }, 300);
-                sectionObserver.unobserve(entry.target);
+                // Transport Section
+                const transTexts = entry.target.querySelectorAll('.reveal-text');
+                transTexts.forEach(text => text.classList.add('reveal-active'));
+
+                // CNF Section
+                const cnfElements = entry.target.querySelectorAll('.cnf-slide-in');
+                cnfElements.forEach(el => el.classList.add('cnf-reveal-active'));
+
+                // Mission & Vision Section
+                const mission = entry.target.querySelector('.mission-reveal');
+                const vision = entry.target.querySelector('.vision-reveal');
+                if (mission) mission.classList.add('reveal-now');
+                if (vision) setTimeout(() => vision.classList.add('reveal-now'), 300);
+
+                generalObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    sectionObserver.observe(document.querySelector('#mission-vision'));
+    // Observe specific containers
+    ['.reveal-container', '.cnf-reveal-container', '#mission-vision'].forEach(id => {
+        const el = document.querySelector(id);
+        if (el) generalObserver.observe(el);
+    });
 });

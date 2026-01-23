@@ -1,5 +1,4 @@
-
-
+/* --- Navigation Links --- */
 .nav-light-link {
   color: #102A43;
   transition: color 0.2s ease;
@@ -8,61 +7,90 @@
 .nav-light-link:hover {
   color: #1FB6AA;
 }
+
+/* --- Core Keyframes --- */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-hero {
-  animation: fadeUp 0.8s ease-out forwards;
+@keyframes slow-pan {
+  0% { transform: scale(1.05) translateX(0); }
+  50% { transform: scale(1.1) translateX(-10px); }
+  100% { transform: scale(1.05) translateX(0); }
 }
 
-.animate-hero-delay-1 {
-  animation: fadeUp 0.8s ease-out 0.2s forwards;
+@keyframes fadeInLeft { 
+  from { opacity: 0; transform: translateX(-40px); } 
+  to { opacity: 1; transform: translateX(0); } 
+}
+
+@keyframes fadeInRight { 
+  from { opacity: 0; transform: translateX(40px); } 
+  to { opacity: 1; transform: translateX(0); } 
+}
+
+@keyframes fadeInUp { 
+  from { opacity: 0; transform: translateY(30px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+/* --- Hero Animation Classes --- */
+/* We set opacity 0 to prevent the 'flash' before animation starts */
+.animate-fade-in-left, 
+.animate-fade-in-right, 
+.animate-fade-in-up,
+.animate-hero,
+[class*="animate-hero-delay"] {
   opacity: 0;
 }
 
-.animate-hero-delay-2 {
-  animation: fadeUp 0.8s ease-out 0.4s forwards;
-  opacity: 0;
-}
+.animate-slow-pan { animation: slow-pan 20s infinite ease-in-out; }
 
-.animate-hero-delay-3 {
-  animation: fadeUp 0.8s ease-out 0.6s forwards;
-  opacity: 0;
-}
+.animate-fade-in-left { animation: fadeInLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-in-right { animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
 
-.animate-hero-delay-4 {
-  animation: fadeUp 0.8s ease-out 0.8s forwards;
-  opacity: 0;
-}
- /* Slider States */
-  .transport-slide.active { opacity: 1; z-index: 10; }
-  
-  /* Text Reveal Trigger Class */
-  .reveal-active {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-/* Ensure the active slide is visible and on top */
-.cnf-image-slide.active {
+.animate-hero { animation: fadeUp 0.8s ease-out forwards; }
+.animate-hero-delay-1 { animation: fadeUp 0.8s ease-out 0.2s forwards; }
+.animate-hero-delay-2 { animation: fadeUp 0.8s ease-out 0.4s forwards; }
+.animate-hero-delay-3 { animation: fadeUp 0.8s ease-out 0.6s forwards; }
+.animate-hero-delay-4 { animation: fadeUp 0.8s ease-out 0.8s forwards; }
+
+.delay-200 { animation-delay: 200ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* --- Slider & Scroll Reveal States --- */
+
+/* Transport Section */
+.transport-slide { opacity: 0; transition: opacity 1s ease-in-out; }
+.transport-slide.active { opacity: 1; z-index: 10; }
+
+.reveal-text { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+.reveal-active {
   opacity: 1 !important;
-  z-index: 10;
+  transform: translateY(0) !important;
 }
 
-/* Force text to slide in when active */
+/* CNF Section */
+.cnf-image-slide { opacity: 0; transition: opacity 1s ease-in-out; }
+.cnf-image-slide.active { opacity: 1 !important; z-index: 10; }
+
+.cnf-slide-in { opacity: 0; transform: translateX(-30px); transition: all 0.8s ease-out; }
 .cnf-reveal-active {
   opacity: 1 !important;
   transform: translateX(0) !important;
 }
-/* Triggered by JavaScript */
-    .reveal-now {
-        opacity: 1 !important;
-        transform: translateX(0) !important;
-    }
+
+/* Mission & Vision Section */
+.mission-reveal, .vision-reveal { 
+  opacity: 0; 
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); 
+}
+.mission-reveal { transform: translateX(-40px); }
+.vision-reveal { transform: translateX(40px); }
+
+.reveal-now {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
