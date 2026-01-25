@@ -20,7 +20,28 @@ window.addEventListener('scroll', function() {
         }
     }
 });
+//transportation service in Bangladesh
+// Intersection Observer for Transport Section
+const observerOptions = {
+    threshold: 0.2
+};
 
+const transportObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Find all reveal-hidden elements inside THIS section
+            const elements = entry.target.querySelectorAll('.reveal-hidden');
+            elements.forEach(el => el.classList.add('reveal-visible'));
+            transportObserver.unobserve(entry.target); // Trigger only once
+        }
+    });
+}, observerOptions);
+
+// Target the transport section specifically
+const transportSection = document.querySelector('#transport');
+if (transportSection) {
+    transportObserver.observe(transportSection);
+}
 // --- SHARED OBSERVER LOGIC ---
 document.addEventListener('DOMContentLoaded', () => {
     
