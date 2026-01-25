@@ -1,7 +1,7 @@
 # TripleEye Group - Enterprise Logistics Solutions 🚛🚢
 
-[![Live Site](https://img.shields.io/badge/Live-Website-1FB6AA?style=for-the-badge)](https://your-vercel-link.vercel.app)
-[![Status](https://img.shields.io/badge/Status-Production--Ready-success?style=for-the-badge)](#)
+[![Live Site](https://img.shields.io/badge/Live-Website-1FB6AA?style=for-the-badge)]((https://www.tripleeye.co/))
+[![Status](https://img.shields.io/badge/Status-Production--Ready-success?style=for-the-badge)](https://www.tripleeye.co/)
 
 TripleEye Group is a premier C&F (Clearing & Forwarding) and Logistics service provider in Bangladesh. Established in 1996, we specialize in seamless port-to-door solutions, customs brokerage, and nationwide freight transportation.
 
@@ -31,3 +31,4 @@ This repository contains the front-end architecture for the TripleEye Group corp
 ├── style.css            # Custom animations and core styles
 ├── main.js              # Intersection observers and mobile logic
 └── vercel.json          # Deployment configuration & Clean URLs
+
