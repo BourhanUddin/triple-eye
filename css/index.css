@@ -118,3 +118,57 @@
     opacity: 1 !important;
     transform: translateX(0) !important;
   }
+
+  /* --- petrons css  --- */
+ /* Infinite Marquee Logic */
+/* --- Optimized Patrons CSS --- */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  will-change: transform; /* Senior Dev Tip: Force GPU acceleration */
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* The "Logo Stage" - making them bigger and colorful on hover */
+.logo-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 10px 40px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-item {
+  height: 60px; /* Bigger size as requested */
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.5s ease;
+}
+
+/* Gradient Glow on Hover */
+.logo-wrapper:hover {
+  background: radial-gradient(circle, rgba(31, 182, 170, 0.1) 0%, transparent 70%);
+  transform: scale(1.15);
+}
+
+.logo-wrapper:hover .logo-item {
+  filter: grayscale(0%) brightness(1); /* Return to original color */
+}
+
+.gradient-mask {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
